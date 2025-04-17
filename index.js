@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 
 app.get("/", (req, res) => {
-    res.send("home page")
+    res.send("dashboard")
 })
 
 app.get("/about", (req, res) => {
@@ -10,7 +10,7 @@ app.get("/about", (req, res) => {
 })
 
 app.get("/home", (req, res) => {
-    res.send("service page")
+    res.send("home page")
 })
 
 app.listen(8000, () => {
