@@ -1,0 +1,34 @@
+# .github/workflows/ci.yml
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18  # or your Node version
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run lint (if any)
+      run: echo "No lint configured" # replace with npm run lint if you have one
+
+    - name: Run tests (if any)
+      run: echo "No tests configured" # replace with npm test if you have one
+
+    - name: Build (optional)
+      run: echo "No build step for backend" # replace with your build command if needed
