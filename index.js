@@ -9,7 +9,7 @@ app.get("/about", (req, res) => {
     res.send("about page")
 })
 
-app.get("/service", (req, res) => {
+app.get("/home", (req, res) => {
     res.send("service page")
 })
 
