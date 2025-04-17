@@ -32,3 +32,7 @@ jobs:
 
     - name: Build (optional)
       run: echo "No build step for backend" # replace with your build command if needed
+
+deploy-to-render:  
+    stage: deploy  
+    script: - curl -X POST https://simple-api-s.onrender.com      
